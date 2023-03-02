@@ -23,5 +23,8 @@ jobs:
         id: build_code
         run: npm run build
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v2
+
       - name: Sync
         run: npx cap sync
