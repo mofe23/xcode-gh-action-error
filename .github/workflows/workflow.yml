@@ -1,0 +1,27 @@
+name: Reproduce xcode error
+
+on: [ push ]
+
+jobs:
+  build_ios:
+    runs-on: macOS-12
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: npm
+
+      - name: Install
+        id: install_code
+        run: npm ci
+
+      - name: Build
+        id: build_code
+        run: npm run build
+
+      - name: Sync
+        run: npx cap sync

@@ -1,0 +1,11 @@
+{
+  "appId": "dev.mofe.xcodeghactionerror",
+  "appName": "xcode-gh-action-error",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
